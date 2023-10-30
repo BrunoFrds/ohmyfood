@@ -1,0 +1,245 @@
+/* Location */
+.infos-position{
+    @include flex-center;
+    background-color: #EAEAEA;
+    box-shadow: inset 0px 5px 5px -2px #D4D4D4;
+    .fa-location-dot{
+        display: inline-block;
+        position: relative;
+        top: -2px;
+        left: -15px;
+        color: $position;
+    }
+    &__location{
+        color: $position;
+        font-family: 'Roboto-regular', serif;
+        font-weight: bold;
+    }
+}
+/* Infos */
+.infos-list{
+    @include flex-column;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 55px;
+    background-color: $background;
+    &__title{
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Roboto-black', serif;
+    margin: 0;
+    padding: 35px 50px 0px 50px;
+    }
+    &__paragraph{
+        text-align: center;
+        font-family: 'Roboto-regular', serif;
+        font-size: 110%;
+        color: $grey-light;
+        margin: 15px 0px 30px 0px;
+    }
+    &__button{
+        width: 175px;
+        font-family: 'Roboto-regular', serif;
+        color: white;
+        text-decoration: none;
+        font-size: 100%;
+        padding: 15px 25px 15px 25px;
+        background: linear-gradient($secondary, $primary);
+        border-radius: 50px;
+        box-shadow: 0px 5px 8px 0px $shadow;
+        &:hover{
+            background: linear-gradient($primary, $secondary);
+        }
+    }
+}
+/* Fonctionnement */
+.rules{
+    @include flex-column;
+    width: 100%;
+    height: 440px;
+    @media screen and (min-width:1100px){
+        height: 250px;
+    }
+}
+.rules-title{
+    font-family: 'Roboto-black', serif;
+    margin: 0;
+    padding: 40px 0px 35px 20px;
+}
+.rules-list{
+    @include flex-column;
+    font-family: 'Roboto-regular', serif;
+    @media screen and (min-width:768px) and (max-width:1099px){
+        display: flex;
+        align-items: center;
+    }
+    @media screen and (min-width:1100px){
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: space-around;
+    }
+    &__text{
+        display: flex;
+        align-items: center;
+        background-color: $background;
+        border-radius: 20px;
+        box-shadow: 0px 5px 8px 0px $shadow;
+        height: 70px;
+        font-weight: bold;
+        margin: 0px 20px 30px 25px;
+        cursor: default;
+        @media screen and (min-width:768px) and (max-width:1099px){
+            width: 400px;
+        }
+        @media screen and (min-width:1100px){
+            width: 330px;
+        }    
+        .fa-solid{
+            color: $grey-light;
+            padding: 0px 30px 0px 10px;
+            }
+        &:hover{
+            background-color: lighten($primary, 35%);
+            .fa-solid{
+                color: $primary;
+            }
+        }
+    }
+}
+.rules-list__number{
+    @include flex-center;
+    position: relative;
+    left: -13px;
+    color: white;
+    background-color: $primary;
+    font-size: 85%;
+    font-family: 'Roboto-thin', serif;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    overflow: visible;
+}
+/* Liste des restaurants */
+.resto{
+    @include flex-column;
+    width: 100%;
+    height: 1230px;
+    background-color: $background;
+    @media screen and (min-width:768px){
+        height: 740px;
+    }
+}
+.resto-title{
+    font-family: 'Roboto-black', serif;
+    margin: 0;
+    padding: 45px 0px 0px 20px;
+}
+.resto-grid{
+    @include flex-column;
+    margin: auto;
+    @media screen and (min-width:768px){
+        max-width: 990px;
+    }
+    @media screen and (min-width:1100px){
+        max-width: 1250px;
+    }
+    @media screen and (min-width:768px){
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    }
+}
+.resto-card{
+    overflow: hidden;
+    width: 337px;
+    height: 250px;
+    font-family: 'Roboto-regular', serif;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 5px 8px 0px $shadow;
+    margin-bottom: 20px;
+    @media screen and (min-width:768px){
+        margin-bottom: 50px;
+    }
+    @media screen and (min-width:1100px){
+        width: 450px;
+    }
+
+    a{
+        text-decoration: none;
+        color: black; 
+    }
+    &__img{
+        height: 175px;
+        margin: 0;
+        overflow: hidden;
+    }
+    &__title{
+        font-size: 110%;
+        font-weight: bold;
+        font-family: 'Roboto-regular', serif;
+        padding: 10px 0px 5px 10px;
+        line-height: 26px;
+    }
+    &__location{
+        font-weight: normal;
+    }
+    &__new{
+        position: relative;
+        top: -240px;
+        left: 240px;
+        width: 80px;
+        padding: 5px 0px 5px 0px;
+        font-size: 10px;
+        text-align: center;
+        color: darken($tertiary, 50%);
+        background-color: $tertiary;
+        @media screen and (min-width:1100px){
+            top: -240px;
+            left: 350px;    
+        }
+    }
+    .fa-heart{
+        color: white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        position: relative;
+        top: -40px;
+        left: 285px;
+        font-size: 150%;
+        cursor: pointer;
+        @media screen and (min-width:1100px){
+            top: -40px;
+            left: 380px;    
+        }
+    }
+    .fa-heart:hover{
+        background: linear-gradient(to bottom left, $primary, $secondary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 0;
+    }
+}
+/* Images - Tailles et position */
+#Palette-goût-accueil{
+    width: 100%;
+    object-fit: cover;
+    object-position: 1px -50px;
+}
+#Note-enchantée-accueil{
+    width: 100%;
+    object-fit: cover;
+    object-position: 1px -150px;
+}
+#La-française-accueil{
+    width: 100%;
+    object-fit: cover;
+    object-position: 1px -50px;
+}
+#Délice-sens-accueil{
+    width: 100%;
+    object-fit: cover;
+    object-position: 1px -50px;
+}

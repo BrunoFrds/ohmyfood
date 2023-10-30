@@ -1,0 +1,16 @@
+.header-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__img{
+        width: 160px;
+        margin: 25px 0px 15px 0px;
+    }
+}
+
+.fa-arrow-left{
+    position: relative;
+    top: 40px;
+    left: 20px;
+    color: #353535;
+}

@@ -1,0 +1,93 @@
+@keyframes loadspin{
+    0%, 90% {
+        opacity: 1;
+        z-index: 1;
+    }
+    0%, 100% {
+        height: 100%;
+        width: 100%;
+    }
+}
+@keyframes spinner{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+.loading-spinner{
+    position: fixed;
+    width: 0;
+    height: 0;
+    background: $primary;
+    opacity: 0;
+    animation: loadspin 3s;
+    div{
+    box-sizing: content-box; 
+    left: 50%;
+    top: 44%;
+    position: absolute;
+    animation: spinner 1s linear infinite;
+    width: 12px;
+    height: 24px;
+    border-radius: 6px / 12px;
+    transform-origin: 6px 52px;
+    }
+    .spin1{
+        transform: rotate(0deg);
+        animation-delay: -0.9166666666666666s;
+        background: $secondary;
+    }
+    .spin2{
+        transform: rotate(30deg);
+        animation-delay: -0.8333333333333334s;
+        background: $secondary;
+    }
+    .spin3{
+        transform: rotate(60deg);
+        animation-delay: -0.75s;
+        background: $secondary;
+    }
+    .spin4{
+        transform: rotate(90deg);
+        animation-delay: -0.6666666666666666s;
+        background: $secondary;
+    }
+    .spin5{
+        transform: rotate(120deg);
+        animation-delay: -0.5833333333333334s;
+        background: $secondary;
+    }
+    .spin6{
+        transform: rotate(150deg);
+        animation-delay: -0.5s;
+        background: $secondary;
+    }
+    .spin7{
+        transform: rotate(180deg);
+        animation-delay: -0.4166666666666667s;
+        background: $secondary;
+    }
+    .spin8{
+        transform: rotate(210deg);
+        animation-delay: -0.3333333333333333s;
+        background: $secondary;
+    }
+    .spin9{
+        transform: rotate(240deg);
+        animation-delay: -0.25s;
+        background: $secondary;
+    }
+    .spin10{
+        transform: rotate(270deg);
+        animation-delay: -0.16666666666666666s;
+        background: $secondary;
+    }
+    .spin11{
+        transform: rotate(300deg);
+        animation-delay: -0.08333333333333333s;
+        background: $secondary;
+    }
+    .spin12{
+        transform: rotate(330deg);
+        animation-delay: 0s;
+        background: $secondary;
+    }    
+}
